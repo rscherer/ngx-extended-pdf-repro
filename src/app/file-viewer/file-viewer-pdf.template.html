@@ -1,0 +1,13 @@
+<div class="pdf-viewer-main-container" [ngClass]="{'pdf-viewer-main-container-side': sideControls}">
+	<ngx-extended-pdf-viewer #pdfViewer [src]="_src" useBrowserLocale="true" language="en-US"
+		(pdfLoaded)="setZoomFactor()" [sidebarVisible]="false" [(zoom)]="zoom" (pdfLoaded)="checkData($event)"
+		[(page)]="currentPage" [spread]="'off'" [showSidebarButton]="false" [showFindButton]="false"
+		[showPagingButtons]="false" [showZoomButtons]="false" [showPresentationModeButton]="false"
+		[showOpenFileButton]="false" [showPrintButton]="false" [showDownloadButton]="false" [showBookmarkButton]="false"
+		[showSecondaryToolbarButton]="false" [showRotateButton]="false" [showHandToolButton]="false"
+		[showScrollingButton]="false" [showSpreadButton]="false" [showPropertiesButton]="false">
+	</ngx-extended-pdf-viewer>
+	<div class="pdf-background" [ngClass]="{'pdf-viewer-background-side': sideControls}">
+		BUTTON
+	</div>
+</div>

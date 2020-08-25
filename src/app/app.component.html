@@ -1,0 +1,29 @@
+<hello name="{{ name }}"></hello>
+
+<button (click)="load()">reload</button>
+
+<div style="width: 50vw" *ngIf="!loading">
+
+	<mat-tab-group (selectedTabChange)="scrollRight($event)">
+
+		<mat-tab label="first tab">
+
+			<div>
+				field field field field
+
+
+
+				<div *ngIf="!loading2" style="height: 1040px;">
+					<file-viewer-pdf [src]="pdfSrc" [fileName]="'testing'" [sideControls]="true"></file-viewer-pdf>
+				</div>
+
+
+			</div>
+		</mat-tab>
+		<mat-tab label="second tab">
+
+		</mat-tab>
+	</mat-tab-group>
+
+
+</div>
